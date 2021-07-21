@@ -1,2 +1,7 @@
 
 $bQMmJg9r-
+
+1. base url not finding
+2. failsafe running twice
+3. install vs verify
+4. serenity not creating report via junit runner

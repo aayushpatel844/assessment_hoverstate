@@ -21,7 +21,7 @@ Feature: I want sell a Pre-paid maintenace contract
 
   @regression
   Scenario Outline: I want to sell a contract for each product offered
-    Given I have a sell contract for "vin" "5XXGT4L37KG367983"
+    Given I have a sell contract for "vin" "1G11Z5S32LU103375"
     And I have the following customer information:
       | John Locke | 123 Test Way | Fairfax | VA | 12345 | jl@jl.net | 1234567890 |
     When I select a "<Product>"
