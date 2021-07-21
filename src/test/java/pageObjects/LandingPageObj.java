@@ -44,11 +44,10 @@ public class LandingPageObj extends UIInteractionSteps {
     By service_redeemed = By.xpath("//td[contains(@data-attribute-name,'Service Redeemed')]/child::div/span");
     By service_ro = By.xpath("//td[contains(@data-attribute-name,'RO Number')]/child::div/span");
     By sucessTxt = By.cssSelector(".standard_medium_text");
-    By input_RO_prepaidSevice = By.xpath("//input[@name='$PInfoServicesRedeem$pRONumber']");
+    By input_RO_prepaidSevice = By.id("c1afef4b");
     String service_checkbox = "]//input[@type='checkbox']";
     By deleteItem = By.cssSelector(".gridCell:nth-child(8) img");
     By deleteBtn= By.cssSelector(".field-item .Secondary_Blue_Button");
-    By close = By.xpath("//a[contains(@data-click,'closeContainer')]");
 
     // new product
     By service_date=By.id("f7b6593d");

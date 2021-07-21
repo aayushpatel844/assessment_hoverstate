@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty"},
         features = "src/test/resources/features",
-        tags="@regressionF"
+        tags="@regression"
 )
 public class CucumberTestSuite {
 

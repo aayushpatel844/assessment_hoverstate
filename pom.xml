@@ -75,7 +75,7 @@
 <!--                <version>3.0.0-M5</version>-->
                 <version>2.22.1</version>
                 <configuration>
-                    <skip>true</skip>
+<!--                    <skip>true</skip>-->
                     <includes>
                         <include>**/*Test.java</include>
                         <include>**/Test*.java</include>
@@ -83,7 +83,7 @@
                         <include>**/When*.java</include>
                     </includes>
                     <systemPropertyVariables>
-                        <webdriver.base.url></webdriver.base.url>
+                        <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
@@ -98,7 +98,7 @@
                         <include>**/When*.java</include>
                     </includes>
                     <systemPropertyVariables>
-                        <webdriver.base.url></webdriver.base.url>
+                        <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
                     </systemPropertyVariables>
                     <parallel>classes</parallel>
                     <parallel>methods</parallel>

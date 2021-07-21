@@ -130,19 +130,11 @@ public class LandingPage extends LandingPageObj {
 
     @Step
     public void verifyContractDisplayed(String name) {
-
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         List<WebElement> element_list = getDriver().findElements(contract_name);
         Set<String> unique_names = new HashSet<String>();
         for (WebElement ele : element_list) {
             unique_names.add(ele.getText().toLowerCase());
         }
-
         Assert.assertTrue(unique_names.contains(name.toLowerCase()));
     }
 
@@ -214,47 +206,23 @@ public class LandingPage extends LandingPageObj {
 
     @Step
     public void selectProductToReedem(String serviceName, String arg0){
-
         int k= getRowID(serviceName)+ 1;
-        WebElement checkbox  = find(By.xpath("//tr["+ k + service_checkbox ));
-
-        boolean success= false;
-        if(checkbox.isDisplayed()){
-            checkbox.click();
-            success=true;
-        } else {
-            // delete from history
-            find(deleteItem).click();
-            find(deleteBtn).click();
-            find(close).click();
-        }
-
-        if(!success)
-            checkbox.click();
+        find(By.xpath("//tr["+ k + service_checkbox )).click();
     }
 
     @Step
     public void typeRO_redeem(String value) {
-        find(input_RO_prepaidSevice).isDisplayed();
-        baseUtil.jsSendKey(getDriver(),input_RO_prepaidSevice,value);
+        typeInto(find(input_RO_prepaidSevice), value);
     }
 
     @Step
     public void verifyReedemItemCount(String serviceName, int count){
-        By redeemCount =  By.xpath(before_path + getRowID(serviceName) + after_redeem_Path);
-        find(redeemCount).getText().equals(String.valueOf(count));
+        find(By.xpath(before_path + getRowID(serviceName) + after_redeem_Path)).getText().contains(String.valueOf(count));
     }
 
     @Step
     public void verifyAvailableItemCount(String serviceName, int count){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        By availableCount =  By.xpath(before_path + getRowID(serviceName) + after_available_Path);
-        find(availableCount).getText().equals(String.valueOf(count));
+        find(By.xpath(before_path + getRowID(serviceName) + after_available_Path)).getText().contains(String.valueOf(count));
     }
 
     @Step
