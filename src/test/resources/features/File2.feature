@@ -23,7 +23,7 @@ Feature: I want to search for a customer
       | field           | search string     |
       | VIN             | 5XXGT4L37KG367983 |
       | Name            | John Locke        |
-      | Phone           | 1234567890        |
+      | Phone           | (123) 456-7890    |
       | Email           | jl@jl.net         |
       | Contract Number | MS4005            |
 
