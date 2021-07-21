@@ -1,0 +1,11 @@
+
+.idea
+target
+README.md
+.DS_Store
+/shelf/
+/workspace.xml
+.target
+.classpath
+.project
+.settings

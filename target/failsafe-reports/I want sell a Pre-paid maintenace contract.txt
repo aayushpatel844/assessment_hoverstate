@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: I want sell a Pre-paid maintenace contract
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.29 s - in I want sell a Pre-paid maintenace contract
