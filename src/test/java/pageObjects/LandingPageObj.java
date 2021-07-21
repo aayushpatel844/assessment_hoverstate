@@ -14,7 +14,7 @@ public class LandingPageObj extends UIInteractionSteps {
     By radio_phone = By.xpath("//input[@value='Phone']");
     By radio_email = By.xpath("//input[@value='Email']");
     By radio_contract = By.xpath("//input[@value='Contract']");
-    By searchInput = By.xpath("//input[@id='5e993137' or @placeholder='(xxx) xxx-xxxx']");
+    By searchInput = By.xpath("//input[contains(@name,'SearchContract')]");
     By search = By.xpath("//button[text()='Search']");
 
 

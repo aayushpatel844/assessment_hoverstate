@@ -5,8 +5,8 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         plugin = {"pretty"},
-        features = "src/test/resources/features/File1.feature",
-        tags="@regression1"
+        features = "src/test/resources/features/File2.feature",
+        tags="@regression"
 )
 public class CucumberTestSuite {
 

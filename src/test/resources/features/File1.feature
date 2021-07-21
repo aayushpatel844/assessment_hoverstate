@@ -11,7 +11,7 @@ Feature: I want sell a Pre-paid maintenace contract
     And I click on [login]
     Then I am logged into the "Service Lane"
 
-  @regression1
+  @regressionFF
   Scenario: I want to initiate a sell contract
     When I search for a customer by "vin" "2C4RC1GG0KR714176"
     But no contracts correspond to that VIN
@@ -19,7 +19,7 @@ Feature: I want sell a Pre-paid maintenace contract
     And I can select the following products:
       | AC Delco | BioPledge | AC Delco Synthetic |
 
-  @regression
+  @regressionFF
   Scenario Outline: I want to sell a contract for each product offered
     Given I have a sell contract for "vin" "5XXGT4L37KG367983"
     And I have the following customer information:
@@ -33,9 +33,9 @@ Feature: I want sell a Pre-paid maintenace contract
       | Product            | RO Number | Service Description | Redeemed | Available | Price | Response                |
       | AC Delco           | R1        | Oil Change          | 0        | 3         | 35.00 | redeem post sell        |
       | AC Delco Synthetic | R2        | Oil Change          | 0        | 3         | 45.00 | do not redeem post sell |
-      | BioPledge          | R3        | -                   | 0        | 3         | 80.00 | do not redeem post sell |
+      | BioPledge          | R3        | BioPledge           | 0        | 3         | 85.00 | do not redeem post sell |
 
-  @regression
+  @regressionF2
   Scenario: I want to redeem a product
     Given I have sold a "AC Delco" contract for "vin" "5XXGT4L37KG367983"
     And the 'Sale Successful' modal currently displays
@@ -47,7 +47,7 @@ Feature: I want sell a Pre-paid maintenace contract
     When I click [OK]
     Then I am returned to the "Service Lane"
 
-  @regression
+  @regressionF2
   Scenario: I do not want to redeem a product after a sell
     Given I have sold a "AC Delco Synthetic" contract for 'vin' '5XXGT4L37KG367983'
     And the 'Sale Successful' modal currently displays

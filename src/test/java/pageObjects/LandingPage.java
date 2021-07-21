@@ -261,8 +261,8 @@ public class LandingPage extends LandingPageObj {
 
     @Step
     public void verifySellContractText(String text) {
-          Assert.assertTrue( getRenderedView().containsText(text));
-        //Assert.assertTrue(find(sell_contract).getText().equalsIgnoreCase(var));
+//          Assert.assertTrue( getRenderedView().containsText(text));
+        Assert.assertTrue(find(sell_contract).getText().equalsIgnoreCase(text));
     }
 
     @Step
