@@ -76,6 +76,7 @@
                 <version>2.22.1</version>
                 <configuration>
 <!--                    <skip>true</skip>-->
+                    <testFailureIgnore>true</testFailureIgnore>
                     <includes>
                         <include>**/*Test.java</include>
                         <include>**/Test*.java</include>
