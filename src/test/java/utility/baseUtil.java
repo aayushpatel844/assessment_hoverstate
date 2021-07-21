@@ -33,4 +33,10 @@ public class baseUtil {
     public static void scrollToElement(WebDriver driver, WebElement element){
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
+
+    public static void jsSendKey(WebDriver driver, By by, String input){
+        String arg= "arguments[0].value='"+ input+"'";
+        ((JavascriptExecutor)driver).executeScript(arg, driver.findElement(by) );
+    }
+
 }

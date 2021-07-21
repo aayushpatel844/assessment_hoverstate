@@ -16,9 +16,14 @@ public class LandingPage extends LandingPageObj {
 
 
     @Step
-    public void verifyTextDisplayed(String expectedTitle) {
+    public void verifyTitleDisplayed(String expectedTitle) {
         getDriver().switchTo().frame(0);
         // title
+        Assert.assertTrue( getRenderedView().containsText(expectedTitle) );
+    }
+
+    @Step
+    public void verifyTextDisplayed(String expectedTitle) {
         Assert.assertTrue( getRenderedView().containsText(expectedTitle) );
     }
 
@@ -70,7 +75,13 @@ public class LandingPage extends LandingPageObj {
 
     @Step
     public void searchInput(String value) {
-        typeInto(find(searchInput), value);
+        baseUtil.waitForElementClickable(getDriver(),searchInput);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        baseUtil.jsSendKey(getDriver(),searchInput,value);
     }
 
     @Step

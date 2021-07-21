@@ -16,7 +16,7 @@ public class LandingStepDef {
     //title
     @Given("I am logged into the {string}")
     public void i_am_logged_into_the(String text) {
-        landingPage.verifyTextDisplayed(text);
+        landingPage.verifyTitleDisplayed(text);
     }
 
     // return - page verification
@@ -142,6 +142,7 @@ public class LandingStepDef {
         landingPage.clickContract(productType);
         landingPage.seeAllOtherProdcut();
         landingPage.addNewProduct(productType);
+        landingPage.type_RO("R12345");
         landingPage.clickOnSellBtn();
     }
 
