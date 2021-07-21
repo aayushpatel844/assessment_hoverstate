@@ -75,7 +75,6 @@ public class LandingPage extends LandingPageObj {
 
     @Step
     public void searchInput(String value) {
-        baseUtil.waitForElementClickable(getDriver(),searchInput);
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -181,8 +180,7 @@ public class LandingPage extends LandingPageObj {
 
     @Step
     public void seeAllOtherProdcut() {
-        JavascriptExecutor js = (JavascriptExecutor) getDriver();
-        js.executeScript("arguments[0].click();", getDriver().findElement(seeAll));
+        baseUtil.jsClick(getDriver(),seeAll);
     }
 
     @Step
@@ -217,18 +215,19 @@ public class LandingPage extends LandingPageObj {
         WebElement checkbox  = find(By.xpath("//tr["+ k + service_checkbox ));
 
         boolean success= false;
-        if(checkbox.isDisplayed()){
+        if(checkbox.isEnabled()){
             checkbox.click();
             success=true;
         } else {
             // delete from history
+            baseUtil.scrollToElement(getDriver(),find(deleteItem));
             find(deleteItem).click();
             find(deleteBtn).click();
             find(close).click();
         }
 
         if(!success)
-            checkbox.click();
+            baseUtil.jsClick(getDriver(),checkbox);
     }
 
     @Step
@@ -250,7 +249,6 @@ public class LandingPage extends LandingPageObj {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         By availableCount =  By.xpath(before_path + getRowID(serviceName) + after_available_Path);
         find(availableCount).getText().equals(String.valueOf(count));
     }

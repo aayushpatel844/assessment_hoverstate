@@ -39,4 +39,8 @@ public class baseUtil {
         ((JavascriptExecutor)driver).executeScript(arg, driver.findElement(by) );
     }
 
+    public static void waitForElementPresence(WebDriver driver, By by){
+        WebDriverWait wait  = new WebDriverWait(driver,15);
+        wait.until(ExpectedConditions.presenceOfElementLocated(by));
+    }
 }

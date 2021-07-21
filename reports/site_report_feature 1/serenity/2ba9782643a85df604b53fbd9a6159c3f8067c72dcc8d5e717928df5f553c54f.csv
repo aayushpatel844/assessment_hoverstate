@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"I want sell a Pre-paid maintenace contract","I want to initiate a sell contract","SUCCESS","2021-07-21T13:15:50.631-04:00[America/New_York]","0.0","25.7"
+"I want sell a Pre-paid maintenace contract","I want to sell a contract for each product offered","SUCCESS","2021-07-21T13:16:16.843-04:00[America/New_York]","0.0","93.04"
+"I want sell a Pre-paid maintenace contract","I want to redeem a product","SUCCESS","2021-07-21T13:17:49.911-04:00[America/New_York]","0.0","20.53"
+"I want sell a Pre-paid maintenace contract","I do not want to redeem a product after a sell","SUCCESS","2021-07-21T13:18:11.032-04:00[America/New_York]","0.0","29.06"

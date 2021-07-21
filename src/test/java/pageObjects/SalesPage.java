@@ -25,9 +25,8 @@ public class SalesPage extends SalesPageObj {
 
     @Step
     public void clickOnNoMoreLink(String linkText){
-        getRenderedView().waitFor(noSell_link);
-        getRenderedView().containsText(linkText);
-        find( noSell_link ).click();
+        baseUtil.waitForElementPresence(getDriver(),noSell_link);
+        find(noSell_link).click();
     }
 
     @Step
